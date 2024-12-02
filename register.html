@@ -45,27 +45,8 @@
                   </li>
                 </ul>
                 <form class="d-flex">
-                  <div class=" position-relative">
-                    <!-- Giỏ hàng -->
-                    <button class="btn btn-outline-light" 
-                        id="cartButton" 
-                        type="button" 
-                        title="Giỏ hàng"
-                        onclick="togglePopup(true)">
-                        🛒 <span id="cartCount" class="badge bg-danger">0</span>
-                    </button>
-                    <!-- Popup HTML -->
-                    <div id="cartPopup" class="popupCart">
-                        <div class="popup-content">
-                        <span class="close" onclick="togglePopup(false)"><i class="fas fa-times"></i></span>
-                        <h4>Giỏ hàng</h4>
-                        <div id="cartItemsPopup"></div>
-                        <button class="btn btn-dark w-100 mt-3" onclick="checkout()">Thanh toán</button>
-                        </div>
-                    </div>
-                  </div>
                   <div id="login-modal">
-                    <div class="row ms-3" >
+                    <div class="row" >
                       <div class="col-md-5">
                         <a href="./login.html" class="btn btn-outline-light btn-block">Login</a>
                       </div>
@@ -74,25 +55,55 @@
                       </div>
                     </div>				
                   </div>
-                  <div id="main-content">
-                    <button type="button" class="btn btn-outline-light" id="btn-logout">Logout</button>
-                  </div>
                 </form>
               </div>
             </div>
           </nav>
     </header>
     <main>
-      <div class="banner">
-        <img width="100%" src="https://file.hstatic.net/200000561769/file/1920x500_v2_up_size.jpg"/>
-      </div>
-        <div class="container">
-            <div class="mt-3"><img width="100%" src="https://file.hstatic.net/200000561769/file/1920_x_100_v2_copy.jpg"></div>
-            <div class="row" id="danhsachsanpham"></div>
-            <nav>
-              <ul id="pagination" class="pagination justify-content-end mt-3"></ul>
-            </nav>
-        </div>
+      <div class="container">
+		<!-- Page Content  -->
+		<div id="content" class="p-4 p-md-5 pt-5">
+			<h2 class="mb-4">Register New User</h2>
+			<div class="container" id="main" style="max-width: 90%;">
+				<div class="row justify-content-center align-items-center mt-4">
+					<div class="col-lg-6 col-lg-offset-4">
+						<form>
+							<div class="form-group row mb-3">
+								<label for="input-id" class="col-sm-3 col-form-label">First Name</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="input-firstname" placeholder="Input First Name">
+								</div>
+								<label for="input-id" class="col-sm-3 col-form-label" style="text-align: right;">Last Name</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="input-lastname" placeholder="Input Last Name">
+								</div>
+							</div>
+							<div class="form-group row mb-3">
+								<label for="input-id" class="col-sm-3 col-form-label">Username</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="input-username" placeholder="Input Username">
+								</div>
+							</div>
+							<div class="form-group row mb-3">
+								<label for="input-name" class="col-sm-3 col-form-label">Password</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" id="input-password" placeholder="Input Password">
+								</div>
+							</div>
+							<div class="form-group row mb-3">
+								<label for="input-name" class="col-sm-3 col-form-label">Confirm Password</label>
+								<div class="col-sm-9">
+									<input type="password" class="form-control" id="input-password-confirm" placeholder="Input Password">
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary" id="btn-submit">Register</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
     </main>
     <footer class="bg-dark p-3">
         <div class="text-white text-center">
@@ -105,6 +116,6 @@
     
 	<script src="./models/User.js"></script>
 	<script src="./storage.js"></script>
-	<script src="./home.js"></script>
+	<script src="./register.js"></script>
 </body>
 </html>
