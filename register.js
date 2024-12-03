@@ -56,7 +56,7 @@ function handleRegister() {
         saveToStorage('users', JSON.stringify(userArr));
 
         alert("Registration successful!");
-        window.location.href = './pages/login.html';
+        window.location.href = './login.html';
     }
 }
 
